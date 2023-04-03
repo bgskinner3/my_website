@@ -137,14 +137,14 @@ const ContactMe = () => {
                   svgProps={{ className: 'rotating-curved-text' }}
                 />
               </div>
-              <div className="absolute left-24 top-52">
+              <div className="absolute left-32 top-44">
                 <InView triggerOnce={true}>
                   {({ inView, ref }) => (
                     <div ref={ref}>
                       <Transition.Root
                         show={inView}
                         appear={true}
-                        className="absolute flex flex-col space-y-12 text-left p-10 z-10 inset-y-48 left-14 text-center"
+                        className="absolute flex flex-col space-y-20 text-left p-10 z-10 inset-y-48 left-14 text-center"
                       >
                         <Transition.Child
                           as="div"

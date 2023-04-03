@@ -20,7 +20,7 @@ const Banner2 = () => {
           </h1>
         </div>
 
-        <div className="role ">
+        <div className="pl-2 role ">
           <div className="block"></div>
 
           <p className="pr-5 text-red-600">FULL-STACK</p>

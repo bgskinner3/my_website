@@ -28,7 +28,7 @@ const MediumPosts = () => {
         id="medium"
         className="grid grid-cols-1 justify-center place-items-center mb-10"
       >
-        <InView triggerOnce={false}>
+        <InView triggerOnce={true}>
           {({ inView, ref }) => (
             <div ref={ref}>
               <Transition.Root show={inView} appear={false} className="">
@@ -37,7 +37,7 @@ const MediumPosts = () => {
                   enter="ease-in delay-[500ms] duration-[300ms] transition-all"
                   enterFrom="opacity-0 translate-x-full rotate-12 "
                   enterTo="opacity-100 translate-x-0 rotate-0"
-                  className="m-10"
+                  className="m-10 w-96"
                 >
                   <div className="aboutMeText font-bold text-white medium-text-border-mobile">
                     MEDIUM
@@ -91,11 +91,13 @@ const MediumPosts = () => {
                         <div
                           className={`h-[110px] w-[220px] hover:scale-95 duration-500 filter grayscale hover:grayscale-0 overflow-hidden rounded-md `}
                         >
-                          <img
-                            className="hover:scale-125 transition-all duration-500 justify-center"
-                            src={post.picture}
-                            alt=""
-                          />
+                          <a href={post.url}>
+                            <img
+                              className="hover:scale-125 transition-all duration-500 justify-center"
+                              src={post.picture}
+                              alt=""
+                            />
+                          </a>
                         </div>
                       </Transition.Child>
                     </div>

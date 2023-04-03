@@ -1017,7 +1017,7 @@ code {
   background-size: 100% 100%;
   background-position: top center;
   background-attachment: fixed;
-  /* background-size: fill; */
+  background-size: cover;
 
   /* background-attachment: fixed; */
 }

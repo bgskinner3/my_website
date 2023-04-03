@@ -80,7 +80,7 @@ const AboutMe = () => {
     });
   }, []);
   return (
-    <div id="about" className="flex flex-col ">
+    <div id="about" className="flex flex-col mb-5">
       <div className="grid grid-cols-2 p-10 flex flex-col md:flex-row gap-2 mt-12">
         <div className="wordMobile m-auto italic font-bold tracking-[.1em] text-red-600 text-left">
           <span>A</span>
