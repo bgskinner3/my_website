@@ -73,7 +73,6 @@ const AboutMe = () => {
         e.target.classList.remove('active');
       });
 
-    
       setTimeout(() => {
         span.classList.add('active');
       }, 750 * (idx + 1));
@@ -81,17 +80,9 @@ const AboutMe = () => {
   }, []);
   return (
     <div id="about" className="flex flex-col mb-5">
-      <div className="grid grid-cols-2 p-10 flex flex-col md:flex-row gap-2 mt-12">
-        <div className="wordMobile m-auto italic font-bold tracking-[.1em] text-red-600 text-left">
-          <span>A</span>
-          <span>B</span>
-          <span>O</span>
-          <span>U</span>
-          <span>T</span>
-        </div>
-
-        <div className="flex">
-          <InView triggerOnce={false}>
+      <div className="flex flex flex-col md:flex-row gap-2 mt-12">
+        <div className="grid grid-cols-1 p-10 flex flex-col md:flex-row gap-2">
+          <InView triggerOnce={true}>
             {({ inView, ref }) => (
               <div ref={ref}>
                 <Transition.Root
@@ -101,13 +92,13 @@ const AboutMe = () => {
                 >
                   <Transition.Child
                     as="div"
-                    enter="ease-in delay-[500ms] duration-[300ms] transition-all"
+                    enter="ease-in delay-[800ms] duration-[300ms] transition-all"
                     enterFrom="opacity-0 translate-y-full  rotate-12"
                     enterTo="opacity-100 translate-y-0 rotate-0"
-                    className=" pt-2"
+                    className=" mr-38"
                   >
-                    <div className="  aboutMeText font-bold text-white ">
-                      ME
+                    <div className=" flex space-x-2 aboutMeText font-bold text-white ">
+                      <p>ABOUT</p> <p>ME</p>
                     </div>
                   </Transition.Child>
                 </Transition.Root>
@@ -115,7 +106,7 @@ const AboutMe = () => {
             )}
           </InView>
           <div className="">
-            <img src={Arrow} alt="" className=" h-[100px] w-[200px]" />
+            <img src={Arrow} alt="" className=" ml-28 h-[50px] w-[100px]" />
           </div>
         </div>
       </div>
@@ -131,31 +122,20 @@ const AboutMe = () => {
             <FadeInSection>
               <section className=" aboutmefont items-center h-full">
                 <div className="text-left  ">
-                  <div className="text-sm h-full leading-loose  text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-600">
-                    <FadeInText>
-                      <div>
-                        <p className="ptags text -pr-2">{`<p>`}</p>
-                        <p className="pl-5">
-                          I am a seasoned full-stack engineer with a wealth of
-                          experience. I am passionate about exploring emerging
-                          technologies and discovering new ways to apply them in
-                          innovative ways.
-                        </p>
-                        <p className="ptags text -pr-2">{`<p>`}</p>
-                      </div>
-                      <div>
-                        <p className="ptags text -pr-2">{`<p>`}</p>
-                        <p className="pl-5">
-                          Beyond my engineering skills, I’m also an avid writer
-                          and thinker, and I enjoy sharing my insights on new
-                          developments in the field. I believe that
-                          collaboration is essential to producing great work,
-                          and I’m always eager to work with like-minded
-                          individuals who share my enthusiasm.
-                        </p>
-                        <p className="ptags text -pr-2">{`<p>`}</p>
-                      </div>
-                    </FadeInText>
+                  <div className="text-xs h-full leading-loose  text-transparent bg-clip-text bg-gradient-to-br from-gray-100 to-gray-600">
+                    <p className="ptags text -pr-2">{`<p>`}</p>
+                    <p className="pl-5">
+                      Greetings! I am Brennan Skinner, a full-stack engineer
+                      with a keen interest in both front-end and back-end
+                      development. Originally from NYC, I am passionate about
+                      exploring all aspects of software engineering. Apart from
+                      my engineering skills, I am an avid writer and thinker,
+                      and I love to share my thoughts on the latest trends in
+                      the field. In my opinion, collaboration is key to creating
+                      excellent work, and I am always eager to work with
+                      like-minded individuals who share my enthusiasm.
+                    </p>
+                    <p className="ptags text -pr-2">{`<p>`}</p>
                   </div>
                 </div>
               </section>
@@ -168,5 +148,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-

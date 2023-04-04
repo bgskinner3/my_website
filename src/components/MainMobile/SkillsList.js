@@ -150,11 +150,11 @@ const SkillsList = () => {
 
   return (
     <div className="mb-24">
-      <div className="flex  pl-20 justify-center pt-8">
+      <div className="flex  pl-8 justify-center pt-8">
         <div className="flex flex-col space-y-4 justify-center">
           <p className="ptagsMobile   tracking-[.1em] -ml-52 ">{`< section >`}</p>
           <p className="ptagsMobile   tracking-[.1em] -ml-48">{`< h1 >`}</p>
-          <div className="grid grid-cols-1 pl-10 pr-10 gap-4 ">
+          <div className="grid grid-cols-1 pl-10 pr-10 gap-2 ">
             <div
               ref={ref}
               className="wordMobile italic font-bold  tracking-[.1em] text-red-600 -ml-32"
@@ -169,7 +169,7 @@ const SkillsList = () => {
             <p className="ptagsMobile   tracking-[.1em] -ml-48">{`< /h1 >`}</p>
             <p className="ptagsMobile   tracking-[.1em] -ml-48">{`< p >`}</p>
             <div className="items-center h-full text-left ">
-              <p className="aboutmefont  -pl-8 text-xs leading-loose text-transparent bg-clip-text bg-gradient-to-l from-slate-500 to-slate-400">
+              <p className="aboutmefont p-10 text-xs leading-loose text-transparent bg-clip-text bg-gradient-to-l from-slate-500 to-slate-400">
                 Here is a list of some of my skills and my level of familiarity
                 with each one. It's intended to provide a brief overview of what
                 I am capable of, and to give you a sense of the expertise I can

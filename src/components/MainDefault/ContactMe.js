@@ -9,6 +9,20 @@ const ContactMe = () => {
   const [startOffset, setStartOffset] = useState(-400);
   const startOffsetRef = useRef(startOffset);
   const ref = useRef(null);
+    const [isPaused, setIsPaused] = useState(false);
+
+    const handleMouseEnter = () => {
+      setIsPaused(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsPaused(false);
+    };
+
+    const animationStyle = {
+      animation: 'move 5s linear infinite',
+      animationPlayState: isPaused ? 'paused' : 'running',
+    };
   useEffect(() => {
     // Create an IntersectionObserver that triggers when the component is 50% visible
     const observer = new IntersectionObserver(
@@ -158,20 +172,10 @@ const ContactMe = () => {
             </div>
 
             <hr className="my-5  h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
-            <div className="flex ">
-              <div className="moving-text-border relative">
-                <animated.div
-                  className="moving-text flex space-x-5 text-bold"
-                  style={textStyles}
-                >
-                  <p>GITHUB </p> <p>MEDIUM </p> <p>LINKEDIN </p>
-                  <p>GMAIL </p>
-                  
-                </animated.div>
-              </div>
-            </div>
+            
           </div>
         </div>
+       
 
         <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent"></div>
       </div>

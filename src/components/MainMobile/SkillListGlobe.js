@@ -154,13 +154,13 @@ const SkillListGlobe = () => {
   return (
     <div id="experience" className="grid grid-cols-1 ">
       <div className="grid grid-cols-1 p-10 flex flex-col md:flex-row gap-2">
-        <InView triggerOnce={false}>
+        <InView triggerOnce={true}>
           {({ inView, ref }) => (
             <div ref={ref}>
               <Transition.Root show={inView} appear={true} className="">
                 <Transition.Child
                   as="div"
-                  enter="ease-in delay-[500ms] duration-[300ms] transition-all"
+                  enter="ease-in delay-[800ms] duration-[300ms] transition-all"
                   enterFrom="opacity-0 translate-y-full  rotate-12"
                   enterTo="opacity-100 translate-y-0 rotate-0"
                   className=" ml-24"

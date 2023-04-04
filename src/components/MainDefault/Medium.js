@@ -2,6 +2,8 @@ import React, { useEffect, useState, useMemo } from 'react';
 import get_most_recent_medium_articles from '../../api/medium_api';
 import { Transition } from '@headlessui/react';
 import { InView } from 'react-intersection-observer';
+import MEDIUMLOGO from '../../images/MEDIUMLOGO.jpeg';
+import Arrow from '../../images/arrowleft.jpg';
 
 import Banner_Pic from '../../images/skyline2.jpg';
 const FADE_INTERVAL_MS = 4750;
@@ -101,10 +103,38 @@ const MediumPosts = () => {
 
   return mediumPosts.length ? (
     <div id="medium" className="m-24">
+      <div>
+        <InView triggerOnce={true}>
+          {({ inView, ref }) => (
+            <div ref={ref}>
+              <Transition.Root show={inView} appear={false} className="">
+                <Transition.Child
+                  as="div"
+                  enter="ease-in delay-[800ms] duration-[300ms] transition-all"
+                  enterFrom="opacity-0 translate-x-full rotate-12 "
+                  enterTo="opacity-100 translate-x-0 rotate-0"
+                  className=""
+                >
+                  <img src={MEDIUMLOGO} alt="logo" />
+                </Transition.Child>
+              </Transition.Root>
+            </div>
+          )}
+        </InView>
+        <div className="grid grid-cols-1 text-left text-2xl mt-3">
+          <p className="p-20 ml-20 mr-20 m-auto text-transparent bg-clip-text bg-gradient-to-l from-slate-500 to-slate-400">
+            Check out my recent Medium articles where I cover technologies I've
+            learned, web3 development, and personal projects. For more, visit my
+            profile.
+          </p>
+          <div className="mr-auto p-">
+            <img src={Arrow} alt="" className="h-[300px] w-[400px] " />
+          </div>
+        </div>
+      </div>
       {mediumPosts.map((post, i) => {
         return (
-          <InView triggerOnce={true} >
-            
+          <InView triggerOnce={true}>
             {({ inView, ref }) => (
               <div ref={ref}>
                 <Transition.Root show={inView} appear={true} className="">

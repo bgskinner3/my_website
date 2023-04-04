@@ -5,6 +5,9 @@ import SkillsList from "./SkillsList";
 import SkillListGlobe from "./SkillListGlobe";
 import MediumPosts from "./MediumPosts";
 import ContactMe from "./ContactMe";
+import ContactMe2 from "./ContactMe2";
+
+
 const MainMobile = () => {
   return (
     <div className="justify-center gap-52">
@@ -13,7 +16,8 @@ const MainMobile = () => {
       <SkillListGlobe />
       <SkillsList />
       <MediumPosts />
-      <ContactMe />
+      <ContactMe2 />
+      {/* <ContactMe /> */}
       {/* <hr class="my-3 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
       <AboutMe />
       <hr class="my-3 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
